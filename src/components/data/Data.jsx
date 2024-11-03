@@ -268,6 +268,7 @@ export const testimonial = [
 
 export const roomItems = [
   {
+    id: 1,
     img: "../assets/img/room-1.jpg",
     price: "$110/night",
     name: "Junior Suit",
@@ -285,6 +286,7 @@ export const roomItems = [
   },
 
   {
+    id: 2,
     img: "../assets/img/room-2.jpg",
     price: "$110/night",
     name: "Executive Suite",
@@ -301,6 +303,7 @@ export const roomItems = [
     darkbtn: "book now",
   },
   {
+    id: 3,
     img: "../assets/img/room-3.jpg",
     price: "$110/night",
     name: "Super Deluxe",
@@ -320,6 +323,7 @@ export const roomItems = [
 
 export const facility = [
   {
+  
     icon: <i class="fa fa-bed text-primary me-2"></i>,
     quantity: 3,
     facility: "bed",

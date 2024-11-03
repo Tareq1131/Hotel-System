@@ -16,6 +16,7 @@ import {
   Services,
   Team,
   Testimonial,
+  RoomDetails,
 } from "./pages/index";
 import Footer from "./components/common/Footer";
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/*" element={<PageNotFound />} />
             <Route path="/rooms" element={<Room />} />
+            <Route path="/room/:id" element={<RoomDetails />} />
             <Route path="/services" element={<Services />} />
           </Routes>
           <Footer />

@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { carouselData } from "../data/Data";
+import { Link } from "react-router-dom";
 
 export default function Carousel() {
   const sliderRef = useRef(null);
@@ -38,7 +39,7 @@ export default function Carousel() {
             <Slider ref={sliderRef} {...settings}>
               {carouselData.map((val, index) => (
                 <div className="carousel-item" key={index}>
-                  <img className="w-100" src={val.img} alt="Image" />
+                  <img className="w-100" src={val.img} alt="Imageq" />
                   <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div className="p-3" style={{ maxWidth: "700px" }}>
                       <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">
@@ -47,18 +48,18 @@ export default function Carousel() {
                       <h1 className="display-3 text-white mb-4 animated slideInDown">
                         {val.title}
                       </h1>
-                      <a
-                        href=""
+                      <Link
+                        to="/rooms"
                         className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
                       >
                         {val.btn1}
-                      </a>
-                      <a
-                        href=""
+                      </Link>
+                      <Link
+                        to="/booking"
                         className="btn btn-light py-md-3 px-md-5 animated slideInRight"
                       >
                         {val.btn2}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

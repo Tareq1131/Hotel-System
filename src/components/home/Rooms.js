@@ -1,6 +1,7 @@
 import React from "react";
 import CommonHeading from "../common/CommonHeading";
 import { facility, roomItems } from "../data/Data";
+import { Link } from "react-router-dom";
 
 export default function Rooms() {
   return (
@@ -14,7 +15,10 @@ export default function Rooms() {
           />
           <div className="row g-4">
             {roomItems.map((item, key) => (
-              <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div
+                className="col-lg-4 col-md-6 wow fadeInUp"
+                data-wow-delay="0.1s"
+              >
                 <div className="room-item shadow rounded overflow-hidden">
                   <div className="position-relative">
                     <img className="img-fluid" src={item.img} alt="img" />
@@ -37,15 +41,18 @@ export default function Rooms() {
                     </div>
                     <p className="text-body mb-3">{item.description}</p>
                     <div className="d-flex justify-content-between">
-                      <a
+                      <Link
                         className="btn btn-sm btn-primary rounded py-2 px-4"
-                        href=""
+                        to={`/room/${item.id}`}
                       >
                         {item.yellowbtn}
-                      </a>
-                      <a className="btn btn-sm btn-dark rounded py-2 px-4" href="">
+                      </Link>
+                      <Link
+                        className="btn btn-sm btn-dark rounded py-2 px-4"
+                        to="/booking"
+                      >
                         {item.darkbtn}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
